@@ -32,7 +32,7 @@
             </script>
         </div>
         <div class="col">
-          <p id="username"><h3 class="text-end">Username</h3></p>
+          <p id="username"><h3 class="text-end">Juan Francisco</h3></p>
         </div>
       </div>
       
@@ -40,8 +40,31 @@
         <div class="col col-lg-3">
           <div class="d-grid gap-2">
             <button id="btn_add_treat" type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#tratamientoModal">+ Tratamiento</button>
-            <button id="btn_add_pill" type="button" class="btn btn-outline-success btn-lg"data-bs-toggle="modal" data-bs-target="#pillModal">+ Pastilla</button>
-          </div>          
+            <button id="btn_add_pill" type="button" class="btn btn-outline-success btn-lg"data-bs-toggle="modal" data-bs-target="#pillModal">+ Pastilla</button>            
+          </div>
+          
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Tratamiento 11
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="abody" class="accordion-body">
+                    <p><strong>Nombre:</strong> Var</p>
+                    <p><strong>id Tratamiento: </strong> Var</p>
+                    <p><strong>id :</strong> Var</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          
         </div>
 
         <div class="col col-lg-9">
@@ -50,7 +73,7 @@
             <table class="table text-center table-hover">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">ID</th>
                   <th scope="col">Medicamento</th>
                   <th scope="col">Hora</th>
                   <th scope="col">Fecha Finalización</th>
@@ -69,7 +92,7 @@
                   <td><button type="button" class="btn btn-success">Tomar</button></td>
                 </tr>
                 -->
-                
+                <td><button id="btntakepill" type="button" class="btn btn-success" >Tomar</button>   
                
               </tbody>
             </table>
@@ -79,48 +102,10 @@
 
       </div>
       <br>
+
       <div class="row">
         <div class="col col-lg-3">
-          <div class="accordion" id="accordionPanelsStayOpenExample">
-
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Tratamiento 11
-                  </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p><strong>Nombre:</strong> Var</p>
-                    <p><strong>id Tratamiento: </strong> Var</p>
-                    <p><strong>id :</strong> Var</p>
-                  </div>
-                </div>
-              </div>
-              <!--Desde aqui hay las 2  
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
-                  </button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                </div>
-              </div>
-            -->
-            </div>
+          
         </div>
       </div>
 
@@ -137,28 +122,28 @@
               <form class="row g-3 needs-validation" novalidate>
 
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="idTratamiento">Id Tratamiento</span>
-                  <input id="idTratamiento" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
                   <span class="input-group-text" id="idPill">idPill</span>
-                  <input id="idPill" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input id="in_idPill" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="amount">Amount</span>
-                  <input id="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text" id="amount">Candidad: </span>
+                  <input id="in_amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="hourstoTake">Hora:</span>
-                  <input id="hourstoTake" type="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text" id="hourstoTake1">Hora 1:</span>
+                  <input id="in_hourstoTake0" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="startDate">Star Date</span>
-                  <input id="startdate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text" id="hourstoTake2">Hora 2:</span>
+                  <input id="in_hourstoTake1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>                
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="daysTreatement">Dias de tratamiento empezando HOY: </span>
+                  <input id="in_daysTreatement" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="finish">Finish Date</span>
-                  <input id="finishDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text" id="available">Pastillas disponibles: </span>
+                  <input id="in_available" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                               
               </form>
