@@ -92,7 +92,7 @@ $(document).ready( () => {
                 id: parseInt(14),
                 available: parseInt($('#in_available').val()),
                 status: "not_completed",
-                statusDescription: "encurso"
+                statusDescription: "encurso" 
             }
             
             $.ajax({
